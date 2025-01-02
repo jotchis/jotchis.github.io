@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAVANTS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    
+
+
+
+
+
+</head>
+<body>
+
+    <nav>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()> <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li> <a href="#">NUESTROS SERVICIOS</a></li>
+            <li> <a href="#">SOBRE NOSOTROS</a></li>
+            <li> <a href="#">CONTÁCTANOS</a></li>
+        </ul>
+        <ul> 
+            <li> <a href="#"><img src="assets/images/Savants AI (400 x 60 px).png" alt="Logo de Savants" style="height: 50px;"></a></li>
+            <li class="hideOnMobile"> <a href="#">¿Qué ofrecemos?</a></li>
+            <li class="hideOnMobile"> <a href="#">Sobre nosotros</a></li>
+            <li class="hideOnMobile"> <a href="#">Contáctanos</a></li>
+            <li class="menu-button" onclick="showSidebar()">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#5f6368">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+        
+    </nav>
+
+<header class="hero">
+
+
+    <video autoplay loop muted playsinline id="video-background">
+        <source src="assets/images/videos/brain_background.mp4" type="video/mp4">
+        Tu navegador no soporta vídeos HTML5.
+    </video>
+
+    <div class="slogan-container">
+        <h1>Impulsando la <span class="highlight">Inteligencia Artificial</span><span class="mobile-br"><br></span> en cada empresa.</h1>
+        <p>Automatiza tus procesos internos con tecnología de vanguardia.</p> <!-- Texto nuevo debajo del slogan -->
+        <p>Moviliza agentes de IA para transformar tus operaciones.</p>
+    </div>
+
+    <div id="particles-js"></div>
+    <div class="cd-words-wrapper">
+        Evoluciona
+    </div>
+
+   
+    
+    <div class="hero-content">
+        <button onclick="location.href='evaluacion.html'" class="evaluate-btn">Inicia tu evaluación</button>
+    </div>
+
+
+    
+</header>
+
+<main>
+
+    <section class="hero">
+        <div class="overlay">
+            <div class="content">
+                <h1>Sobre nosotros</h1>
+                <p>
+                    En Savants, somos apasionados por transformar el futuro a través de la inteligencia artificial. Fundada con el propósito de revolucionar la manera en que las empresas abordan sus desafíos, nuestra empresa se especializa en ofrecer soluciones tecnológicas innovadoras que optimizan procesos, mejoran la eficiencia y potencian la toma de decisiones.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="services">
+        <h1>Algunas herramientas que usamos</h1>
+        <div class="service">
+            <img src="assets/images/AWS Logo.png" alt="AWS Logo">
+            <p>Líder en infraestructura cloud, permite crear, gestionar y escalar aplicaciones de manera flexible y económica.</p>
+        </div>
+        <div class="service">
+            <img src="assets/images/OpenAI-Logo.png" alt="OpenAI Logo">
+            <p>OpenAI facilita el desarrollo de modelos avanzados de lenguaje y aprendizaje automático.</p>
+        </div>
+        <div class="service">
+            <img src="assets/images/Make-logo.png" alt="Make Logo">
+            <p>Automatización de procesos que conecta aplicaciones y genera mayor productividad.</p>
+        </div>
+    </section>
+
+    
+
+
+    <div id="whatsapp-widget">
+        <a href="https://wa.me/1234567890" target="_blank" aria-label="Chat on WhatsApp">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" style="width: 50px; height: 50px;">
+        </a>
+    </div>
+</main>
+
+<footer>
+    <div class="social-icons">
+        <a href="https://www.linkedin.com/company/savants-ai/about/" target="_blank" aria-label="LinkedIn">
+            <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="https://www.instagram.com/ai.savants/" target="_blank" aria-label="Instagram">
+            <i class="bi bi-instagram"></i>
+        </a>
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+            <i class="bi bi-facebook"></i>
+        </a>
+        <a href="mailto:example@email.com" aria-label="Email">
+            <i class="bi bi-envelope"></i>
+        </a>
+        <p class="footer-text">&copy; 2024 SAVANTS. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<!-- Compiled and minified JavaScript for Materialize -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems, {});
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+<script src="script.js"></script>
+<script>
+    function showSidebar() {
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = "flex"
+    }
+    function hideSidebar() {
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = "none"
+    }
+</script>
+
+</body>
+</html>

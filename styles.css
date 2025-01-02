@@ -1,0 +1,1160 @@
+/* Estilos básicos para todo el cuerpo del documento. Define la tipografía, color base, entre otros. */
+body {
+  font-family: 'Roboto', sans-serif; /* Define la familia de fuente para todo el documento. */
+  line-height: 1.6; /* Establece la altura de línea para mejorar la legibilidad del texto. */
+  margin: 0; /* Elimina los márgenes predeterminados del navegador. */
+  padding: 0; /* Elimina el padding predeterminado del navegador. */
+  color: #333; /* Establece el color de texto principal para el cuerpo del documento. */
+  overflow-x: hidden; /* Evita el desbordamiento horizontal en caso de un ancho de contenido mayor que el viewport. */
+  background: #000000; /* Establece el color de fondo de toda la página a negro. */
+}
+
+/* Estilos para el encabezado principal, utilizado comúnmente para la introducción o sección hero. */
+header.hero {
+  background: linear-gradient(135deg, #000, #2d2c32), url('/api/placeholder/1200/400'); /* Fondo con un gradiente y una imagen de fondo. */
+  background-size: cover; /* Asegura que la imagen de fondo cubra todo el espacio disponible sin repetirse. */
+  background-position: center; /* Centra la imagen de fondo en el contenedor. */
+  min-height: 100vh; /* Establece una altura mínima del 100% del viewport para la sección hero. */
+  display: flex; /* Utiliza Flexbox para alinear los elementos hijos. */
+  flex-direction: column; /* Los elementos hijos se organizan en una columna. */
+  align-items: center; /* Alinea los elementos hijos horizontalmente al centro. */
+  justify-content: center; /* Alinea los elementos hijos verticalmente al centro. */
+  text-align: center; /* Alinea el texto al centro. */
+  color: white; /* Establece el color del texto a blanco. */
+  position: relative; /* Establece la posición relativa para posicionar absolutamente elementos internos si es necesario. */
+}
+
+#video-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0; /* Asegura que el video esté debajo de las partículas */
+  object-fit: cover; /* Asegura que el video cubra completamente el área sin deformarse */
+  overflow: hidden; /* Oculta los desbordes del contenedor */
+}
+
+
+
+
+
+/* Estilos para el logo dentro del header. */
+.logo {
+  width: 180px; /* Ancho fijo del logo para uniformidad. */
+  height: auto; /* La altura se ajusta automáticamente. */
+  margin-top: 20px; /* Espacio arriba del logo para separarlo de otros elementos. */
+}
+
+/* Estilos para el contenido principal dentro del encabezado hero. */
+.hero-content {
+  display: flex; /* Usa flexbox para la organización interna. */
+  flex-direction: column; /* Organiza los hijos en columna. */
+  align-items: center; /* Alinea los elementos hijos al centro horizontalmente. */
+  z-index: 10; /* Eleva el contenido sobre el fondo pero debajo de otros elementos absolutos. */
+  animation: fadeIn 3s ease-in-out; /* Aplica animación de desvanecimiento. */
+  padding-top: 500px; /* Espacio en la parte superior. */
+}
+
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;  /* Asegúrate de que no esté siendo ocultado por otros elementos */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.evaluate-btn {
+  font-size: 18px; /* Tamaño adecuado para pantallas grandes */
+  padding: 10px 20px;
+}
+
+
+
+
+.cd-words-wrapper {
+  position: absolute; /* Posicionamiento absoluto respecto al contenedor padre */
+  top: 75%; /* Centra verticalmente */
+  left: 50%; /* Centra horizontalmente */
+  transform: translate(-50%, -50%); /* Ajuste fino para centrar exactamente */
+  opacity: 0;
+  transition: opacity 1s; /* Transición suave de la opacidad */
+  display: block; /* Cambiado de inline-block a block para mejor control */
+  font-family: 'Arial', sans-serif; /* Ejemplo con Arial */
+  font-weight: bold; /* Hace el texto en negrita */
+  font-size: 20px; /* Tamaño inicial de la fuente */
+  color: #ffffff; /* Asegurando que el texto sea visible sobre fondos oscuros */
+  z-index: 3; /* Asegura que el texto esté sobre las partículas y el vídeo */
+  text-align: center; /* Asegura que el texto se alinee correctamente si es más de una línea */
+  width: 100%; /* Ocupa el ancho completo del contenedor para centrar el texto */
+}
+
+.is-visible {
+  opacity: 1; /* Totalmente visible cuando la clase es añadida */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos base para el contenedor del eslogan */
+.slogan-container {
+  position: absolute;
+  width: 100%;
+  top: 16%; /* Ajustado para centrar verticalmente de forma más efectiva */
+  text-align: center;
+  z-index: 3;
+  transform: translateY(-50%); /* Centra el texto verticalmente */
+}
+
+
+.highlight {
+  color: #2979FF; /* O el color que elijas para el highlight */
+  font-weight: bold; /* Opcionalmente, hacer el texto más bold */
+}
+
+
+
+/* Estilos para el título dentro del contenedor */
+.slogan-container h1 {
+  font-size: 3rem; /* Tamaño grande para mayor impacto en pantallas grandes */
+  color: #FFFFFF; /* Color blanco para el texto general */
+  padding: 20px 10px; /* Espaciado para asegurar legibilidad */
+  margin: 0; /* Remueve cualquier margen por defecto */
+}
+
+.slogan-container p {
+  font-size: 1.2rem; /* Más pequeño que el título */
+  color: #7b7878; /* Un gris claro para diferenciarlo del título principal */
+  text-align: center; /* Asegura que el texto esté centrado */
+  margin: 0 auto; /* Centra el texto horizontalmente y remueve margen externo */
+  width: 80%; /* Limita el ancho del párrafo para mejor legibilidad */
+  line-height: 1.4; /* Aumenta la altura de línea para mejorar la legibilidad */
+}
+
+
+
+
+
+
+/* Estilos para el texto destacado */
+.slogan-container .highlight {
+  color: #30b9eb; /* Azul brillante, ajusta este valor según tu paleta de colores */
+  font-weight: bold; /* Opcional: añade negrita para más énfasis */
+}
+
+
+
+
+.slogan-container p:not(:first-child) {
+  margin-top: 8px; /* Aplica margen solo si no es el primer párrafo */
+}
+
+/* Otra opción usando el selector general de hermano */
+.slogan-container p + p {
+  margin-top: 8px; /* Solo añade margen superior a párrafos que siguen otro párrafo */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Base styles for the navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+  background-color: transparent; /* Set background to transparent */
+  height: 80px; /* Fixed height */
+  width: 100%; /* Full width */
+  
+}
+
+.navbar-container {
+  max-width: 1200px; /* Limiting max width for better alignment */
+  width: 100%;
+  margin: auto; /* Centering the navbar container */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.logo img {
+  height: 50px; /* Adjust logo height */
+}
+
+.navbar-toggle {
+  display: none; /* Hide toggle button by default */
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  list-style: none; /* Remove default list styling */
+  
+}
+
+.nav-item {
+  padding: 0 15px; /* Spacing between menu items */
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white; /* Set text color */
+  font-size: 16px; /* Font size for readability */
+  transition: color 0.3s;
+  font-weight: bold;
+}
+
+.nav-link:hover, .nav-link:focus {
+  color: #00cd4f; /* Highlight color on hover */
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+  display: none; /* Hide dropdown by default */
+  position: absolute;
+  background-color: #333; /* Dark background for dropdown */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Subtle shadow */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block; /* Show dropdown on hover */
+}
+
+.dropdown-menu li {
+  padding: 10px; /* Padding inside dropdown */
+}
+
+.dropdown-menu li a {
+  color: white; /* Text color in dropdown */
+  text-decoration: none; /* No underline */
+}
+
+
+
+/* Toggle button design */
+.navbar-toggle {
+  border: 0;
+  background: none;
+}
+
+.navbar-toggle-icon {
+  background-color: white;
+  width: 30px;
+  height: 3px;
+  position: relative;
+}
+
+.navbar-toggle-icon::after, .navbar-toggle-icon::before {
+  content: '';
+  background-color: white;
+  width: 30px;
+  height: 3px;
+  position: absolute;
+  transition: transform 0.3s ease;
+}
+
+.navbar-toggle-icon::before {
+  transform: translateY(-10px);
+}
+
+.navbar-toggle-icon::after {
+  transform: translateY(10px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos base para el contenedor y la alineación del texto */
+.container {
+  max-width: 1200px;
+  margin: 0 auto; /* Centra el contenedor */
+  padding: 0px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Estilos para los recuadros de características */
+.feature-box img {
+  width: 100%; /* Hace que la imagen ocupe todo el ancho de la tarjeta */
+  height: auto; /* Mantiene la proporción de la imagen */
+  margin-top: 15px; /* Añade un margen superior para separar la imagen del texto */
+  border-radius: 8px; /* Opcional: Añade bordes redondeados a la imagen */
+}
+
+
+/* Diferentes colores de fondo según el delay en la animación AOS */
+.feature-box[data-aos-delay="100"] {
+  background-color: #a5bed0;
+}
+
+.feature-box[data-aos-delay="200"] {
+  background-color: #244862;
+}
+
+.feature-box:not([data-aos-delay]) {
+  background-color: #244862;
+}
+
+/* Estilo para el hover de los feature-box */
+.feature-box:hover {
+  transform: translateY(-10px); /* Elevación ligera al pasar el ratón */
+}
+
+/* Ajuste de responsividad para las columnas */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Distribuye los elementos de manera uniforme y los centra */
+}
+
+.col-md-4 {
+  flex: 0 0 33.333%; /* Ocupa el 33.333% del espacio disponible en pantallas grandes */
+  max-width: 33.333%;
+  box-sizing: border-box;
+  padding: 10px; /* Espacio interno alrededor del contenido */
+}
+
+/* Estilos para íconos dentro de los feature-box */
+.icon-holder {
+  font-size: 24px; /* Tamaño de los íconos */
+  color: #007bff; /* Color azul para los íconos */
+  margin-bottom: 10px; /* Espacio debajo del ícono */
+}
+
+
+
+
+
+
+        
+
+
+
+.container {
+  margin: 0 auto;
+}
+
+.card {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  margin: 0 auto;
+  background: #000;
+  border-radius: 15px;
+  box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+}
+
+.face {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.face.back {
+  box-sizing: border-box;
+  padding: 1px;
+  padding-top: 0px;
+}
+
+.face.back b {
+  margin: 0;
+  padding: 0;
+}
+
+.face.back .desc {
+  background-color: #eee;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.face.front {
+  background-color: #045f5f;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 20px;
+  transition: 0.5s;
+  height: 100%; /* Establece la altura a full para evitar cambios */
+}
+
+.face.front b {
+  margin: 0;
+  padding: 0;
+  font-size: 2.1em;
+  color: #fff;
+  transition: 0.5s;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  text-align: center;
+}
+
+.card:hover .face.front {
+  height: 70px;
+}
+
+.card:hover .face.front b {
+  font-size: 2em;
+}
+
+.face.front {
+  background-color: #045f5f;
+  border-radius: 15px;
+}
+
+
+.face.back .content .card-image {
+  width: 100%;  /* Hace que la imagen ocupe el ancho completo del contenedor */
+  height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+  max-height: 150px; /* Limita la altura máxima para mantener la imagen proporcionada al tamaño de la tarjeta */
+  object-fit: cover; /* Asegura que la imagen cubra completamente el espacio sin distorsionarse */
+  object-position: center; /* Centra la imagen dentro del espacio asignado */
+  display: block; /* Asegura que la imagen no esté en línea */
+  border-radius: 10px; /* Opcional: añade un borde redondeado para estilizar */
+}
+
+.face.back .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el contenido horizontalmente */
+  justify-content: center; /* Centra el contenido verticalmente */
+  padding: 20px; /* Proporciona espacio alrededor del contenido */
+  overflow: hidden; /* Oculta cualquier parte de la imagen que se desborde */
+}
+
+
+
+
+
+
+
+.container {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card_services {
+  position: relative;
+  width: 100%;
+  background: #0cbaba;
+  border-radius: 10px;
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card_services img {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+.card_services b {
+  font-size: 1.5rem;
+  display: block;
+  color: #fff;
+}
+
+.card_services p {
+  font-size: 0.9rem;
+  margin-top: 10px;
+  color: #fff;
+  padding: 0 10px; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos para el botón de evaluación. */
+.evaluate-btn {
+  padding: 10px 20px;
+  border: none;
+  font-size: 17px;
+  color: #fff;
+  border-radius: 1px;
+  letter-spacing: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.5s;
+  transition-property: box-shadow;
+
+}
+
+.evaluate-btn{
+  background: rgb(0,140,255);
+  box-shadow: 0 0 14px rgb(0,140,255);
+}
+
+/* Estilos para el botón al ser enfocado o al pasar el ratón. */
+.evaluate-btn:hover {
+  box-shadow: 0 0 1px rgb(0,140,255),
+  0 0 25px rgb(0,140,255),
+  0 0 25px rgb(0,140,255),
+  0 0 25px rgb(0,140,255);
+}
+
+/* Estilos para el contenedor principal debajo del hero, usado para contener elementos principales. */
+.main {
+  padding: 20px; /* Relleno interno para separación de contenido. */
+  max-width: 1200px; /* Ancho máximo para controlar la extensión de los contenidos. */
+  margin: 0 auto; /* Centra el contenedor en la página. */
+}
+
+
+
+
+main {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background: #ffffff;
+  padding: 20px;
+}
+
+.graphic img {
+  width: 100%;
+  height: auto;
+}
+
+.slider-container {
+  position: relative;
+  margin: 20px 0;
+}
+
+.slide {
+  display: none; /* Solo una slide visible a la vez, controlado por JavaScript */
+  padding: 20px;
+  text-align: center;
+}
+
+.slider-buttons {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.background-section .background-image {
+  background-size: cover;
+  background-position: center;
+  padding: 40px;
+  color: white;
+}
+
+.services-section .service {
+  background: white;
+  margin: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.featured-section {
+  background: #ffffff;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.success-section, .contact-section {
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.more-info-btn {
+  background: blue;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+
+
+
+
+/* Estilos para el pie de página. */
+footer {
+  background-color: #2c3e50; /* Fondo oscuro para el pie de página. */
+  color: white; /* Texto en blanco para contraste. */
+  text-align: center; /* Centra el texto dentro del pie de página. */
+  padding: 1rem; /* Relleno para tamaño del pie de página. */
+  margin-top: 2rem; /* Espacio antes del pie de página. */
+}
+
+/* Estilos para las partículas de fondo usadas en el hero y posiblemente en otras áreas. */
+#particles-js, #particles-js-hero {
+  position: absolute; /* Posicionamiento absoluto para superponer en el fondo. */
+  width: 100%; /* Ocupa todo el ancho disponible. */
+  height: 100%; /* Ocupa toda la altura disponible. */
+  top: 0; /* Alineado al top del contenedor. */
+  left: 0; /* Alineado a la izquierda del contenedor. */
+  z-index: 1; /* Bajo z-index para asegurar que esté detrás de otros contenidos. */
+}
+
+/* Keyframes para animación de aparición usada en contenido del hero. */
+@keyframes fadeIn {
+  from { opacity: 0; } /* Comienza completamente transparente. */
+  to { opacity: 1; } /* Finaliza completamente opaco. */
+}
+
+#logo-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: visible; /* Ajusta si necesario a hidden para limitar el desbordamiento */
+  display: flex; /* Asegúrate de que el contenedor usa flex si es necesario */
+  justify-content: center;
+  align-items: center;
+}
+
+#left-brain, #right-brain {
+  position: absolute;
+  width: 150px;  /* Ajusta el tamaño si es necesario */
+  height: 150px; /* Ajusta el tamaño si es necesario */
+  top: 70%;  /* Centra verticalmente */
+  transform: translateY(-50%); /* Centra verticalmente */
+}
+
+#right-brain {
+  left: 75px; /* Ajusta a la mitad del ancho del logo para alinear inicialmente */
+}
+
+
+
+
+
+
+
+.feature-box {
+  margin-top: 20px;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.icon-holder {
+  font-size: 30px; /* Tamaño del icono */
+  color: #007bff; /* Color del icono */
+}
+
+.feature-box h4 {
+  margin-top: 10px; /* Espacio entre el icono y el título */
+}
+
+.feature-box p {
+  font-size: 16px; /* Tamaño de la fuente del párrafo */
+  color: #666; /* Color del texto del párrafo */
+}
+
+
+
+
+
+
+
+footer {
+  text-align: center;
+  padding: 0px;
+  background-color: #000000; /* Color de fondo */
+  color: #212529; /* Color del texto */
+  font-family: Arial, sans-serif;
+}
+
+.footer-text{
+  color: #f8f9fa;
+  padding: 10px;
+}
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: #fdfdfd;
+  font-size: 24px; /* Tamaño de los íconos */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #007bff; /* Cambia a azul al pasar el mouse */
+}
+
+
+
+
+#whatsapp-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+#whatsapp-widget img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+#whatsapp-widget img:hover {
+  transform: scale(1.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.nav{
+  display: flex;
+  justify-content: center; /* Centra los contenidos de la barra de navegación horizontalmente */
+  align-items: center; /* Alinea los contenidos verticalmente */
+  width: 100%; /* Asegura que la barra de navegación ocupe todo el ancho disponible */
+  background-color: transparent; 
+  box-shadow: 3px 3px 3px rgb(94, 255, 0);
+
+}
+
+nav ul{
+  list-style: none; /* Elimina los puntos de la lista para limpiar el diseño */
+  display: flex; /* Habilita flexbox para los elementos de la lista */
+  justify-content: center; /* Centra los elementos de la lista horizontalmente en el contenedor */
+  align-items: center; /* Alinea los elementos de la lista verticalmente */
+  padding: 0; /* Elimina el padding por defecto */
+  margin: 0; /* Elimina los márgenes por defecto */
+  width: 100%; /* Asegura que las listas usen todo el ancho disponible */
+
+}
+
+nav li{
+  height: 50px;
+  padding: 10px;
+}
+
+nav a{
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: rgb(169, 166, 166);
+}
+
+nav a:hover{
+  background-color: rgba(0, 0, 0, 0.1); /* Blanco con baja opacidad */
+  color: rgb(1, 1, 1); /* Cambia el color del texto a un azul claro */
+  text-shadow: 0 0 1px rgb(0, 0, 0), 0 0 10px rgb(251, 251, 251), 0 0 20px rgb(243, 243, 243), 0 0 40px rgb(255, 255, 255); /* Efecto neón */
+
+}
+
+nav li:first-child{
+  margin-right: auto;
+
+}
+
+.sidebar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 1000;
+  background-color: rgba(25, 62, 211, 0.2);
+  backdrop-filter: blur(10px) ;
+  box-shadow: -10px 0 10px rgba(224, 200, 19, 0.05);
+  display: none;
+  flex-direction: column;
+  align-items:flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+.sidebar li{
+  width: 100%;
+}
+
+.sidebar a{
+  width: 100%;
+}
+
+.menu-button {
+  display: none;
+  z-index: 1000;
+  
+}
+
+.hideOnMobile {
+  display: block; /* Asegúrate de que estos elementos sean visibles para pruebas */
+}
+
+
+
+
+
+
+  header h1, header p {
+    text-align: center; /* Asegura que el texto esté centrado en dispositivos móviles. */
+  }
+
+  .hero-content {
+    padding: 10px; /* Reduce el padding en dispositivos móviles para un mejor uso del espacio. */
+    padding-top: 470px; /* Aumenta el padding superior en dispositivos móviles */
+  }
+
+  
+
+  .services {
+    flex-direction: column; /* Apila los servicios verticalmente en dispositivos pequeños. */
+  }
+
+  .service {
+    flex-basis: 100%; /* Hace que cada servicio ocupe el ancho completo en dispositivos móviles. */
+    margin: 10px 0; /* Solo margen vertical para mantener separados los servicios. */
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Configuración del contenedor principal */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Ajusta la altura según tu diseño */
+  background: url('assets/images/sp-sav.png') no-repeat center center/cover; /* Imagen de fondo */
+}
+
+/* Efecto de superposición */
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Fondo negro con transparencia */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+/* Estilos del contenido */
+.hero .content {
+  max-width: 600px;
+  padding: 20px;
+}
+
+.hero .content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero .content p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+
+
+.services {
+  display: flex;
+  justify-content: center; /* Centra los servicios horizontalmente */
+  align-items: flex-start; /* Alinea los servicios al inicio del contenedor verticalmente */
+  text-align: center;
+  flex-wrap: wrap;        /* Permite múltiples filas si es necesario */
+  gap: 30px;              /* Espaciado entre los elementos */
+  padding: 20px;
+  height: auto;           /* Ajusta la altura al contenido */
+  background-color: #f9f9f9; /* Fondo opcional */
+}
+
+h1 {
+  width: 100%;            /* Hace que el título ocupe todo el ancho */
+  text-align: center;     /* Centra el título */
+  margin-bottom: 20px;    /* Espacio entre el título y los servicios */
+  font-family: 'Arial', sans-serif; /* Cambia 'Arial' por la fuente que prefieras */
+  font-size: 2rem;                  /* Ajusta el tamaño de la fuente */
+  font-weight: bold;                /* Establece el grosor de la fuente */
+}
+
+.service {
+  max-width: 220px;       /* Amplía el ancho máximo de cada servicio */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;              /* Espaciado entre imagen y texto */
+  margin: 10px 0;         /* Espaciado vertical entre servicios */
+}
+
+.service img {
+  max-width: 160px;       /* Ajusta el tamaño de las imágenes */
+  height: auto;
+  margin-bottom: 10px;    /* Espaciado entre imagen y texto */
+}
+
+.service p {
+  font-size: 0.95rem;     /* Ajusta el tamaño de fuente */
+  color: #555;
+  margin: 0;             /* Elimina márgenes adicionales del texto */
+}
+
+.service img[src="assets/images/Make-logo.png"] {
+  max-width: 100px; /* Ajusta el tamaño específico para la imagen de Make */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Media queries para ajustes responsivos desde las pantallas más grandes a las más pequeñas */
+@media (min-width: 1201px) and (max-width: 1440px) {
+  .slogan-container h1 {
+    font-size: 2.5rem; /* Tamaño ajustado para pantallas grandes */
+    padding-top: 65px; /* Ajuste en el padding para mantener una buena proporción visual */
+  }
+}
+
+@media (max-width: 1200px) {
+  .slogan-container h1 {
+    font-size: 2.2rem; /* Tamaño más pequeño para pantallas medianas */
+    padding-top: 55px;
+  }
+}
+
+@media (max-width: 1025px) {
+  .cd-words-wrapper {
+    font-size: 18px; /* Reduce el tamaño de la fuente para pantallas pequeñas */
+    top: 33%; /* Ajusta la posición para estar más cerca del centro visual */
+  }
+  .evaluate-btn {
+    font-size: 22px; /* Reduce el tamaño de la fuente del botón */
+    padding: 8px 16px; /* Ajusta el padding para mantener la proporcionalidad */
+  }
+}
+
+@media (max-width: 1024px) {
+  .cd-words-wrapper {
+    font-size: 18px; /* Reduce el tamaño de la fuente para pantallas pequeñas */
+    top: 75%; /* Ajusta la posición para estar más cerca del centro visual */
+  }
+  .evaluate-btn {
+    font-size: 18px; /* Reduce el tamaño de la fuente del botón */
+    padding: 8px 16px; /* Ajusta el padding para mantener la proporcionalidad */
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar-toggle {
+    display: block; /* Show toggle button on smaller screens */
+  }
+  .nav-links {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    flex-direction: column; /* Stack items vertically */
+    width: 100%; /* Full width */
+    display: none; /* Hide initially */
+    background-color: #000; /* Background color */
+    text-align: center; /* Center text */
+  }
+  .nav-item {
+    width: 100%; /* Full width for each item */
+  }
+  .navbar.active .nav-links {
+    display: flex; /* Show menu when active */
+  }
+}
+
+@media (max-width: 800px) {
+  .hideOnMobile {
+    display: none;
+  }
+  .menu-button {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .services, .service, .service img, .service p, .cd-words-wrapper, .evaluate-btn, .col-md-4, .card_services, .face.back .content .card-image, .mobile-br, .hero-content {
+    /* Los servicios se disponen en columna */
+    flex-direction: column; 
+    align-items: center;    
+    gap: 20px;              
+    padding: 10px;          
+
+    /* Los servicios ocupan el 100% del ancho */
+    max-width: 100%; 
+    font-size: 0.9rem; /* Reduce aún más el tamaño de la fuente para pantallas pequeñas */
+    width: 90%; /* Aumenta el ancho para aprovechar más espacio */
+
+    /* Reduce el tamaño de la fuente del botón */
+    font-size: 18px; 
+    padding: 8px 16px; 
+  }
+  .service img {
+    max-width: 120px; /* Reducir el tamaño de las imágenes */
+  }
+}
+
+@media (max-width: 576px) {
+  .col-md-4 {
+    flex: 0 0 100%; /* Cambia a 100% para pantallas pequeñas */
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .slogan-container h1, .cd-words-wrapper, .evaluate-btn, .sidebar {
+    font-size: 1.5rem; /* Tamaño aún más pequeño para pantallas pequeñas */
+    font-size: 14px; /* Reduce aún más el tamaño de la fuente del botón */
+    padding: 6px 12px; /* Reduce el padding */
+    width: 100%; /* Ajusta el ancho al 100% */
+  }
+}
+
+@media (max-width: 320px) {
+  /* Estilos específicos para pantallas muy pequeñas */
+  .container, .button, h1, h2, h3 {
+      padding: 8px; /* Menor padding */
+      margin: 5px; /* Menor margen */
+      font-size: smaller; /* Fuente más pequeña si es necesario */
+  }
+}
+
+
