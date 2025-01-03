@@ -9,6 +9,15 @@ body {
   background: #000000; /* Establece el color de fondo de toda la página a negro. */
 }
 
+@media (max-width: 412px) {
+  nav a {
+    padding: 0 3.9px;  /* Reduce el padding a algo más razonable para pantallas pequeñas */
+    font-size: 14px;  /* Reduce el tamaño de la fuente si es necesario */
+    justify-content: center; /* Asegura que el contenido esté centrado dentro del enlace */
+  }
+}
+
+
 /* Estilos para el encabezado principal, utilizado comúnmente para la introducción o sección hero. */
 header.hero {
   background: linear-gradient(135deg, #000, #2d2c32), url('/api/placeholder/1200/400'); /* Fondo con un gradiente y una imagen de fondo. */
