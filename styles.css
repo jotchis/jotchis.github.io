@@ -9,13 +9,7 @@ body {
   background: #000000; /* Establece el color de fondo de toda la página a negro. */
 }
 
-@media (max-width: 412px) {
-  nav a {
-    padding: 0 3.9px;  /* Reduce el padding a algo más razonable para pantallas pequeñas */
-    font-size: 14px;  /* Reduce el tamaño de la fuente si es necesario */
-    justify-content: center; /* Asegura que el contenido esté centrado dentro del enlace */
-  }
-}
+
 
 
 /* Estilos para el encabezado principal, utilizado comúnmente para la introducción o sección hero. */
@@ -33,7 +27,7 @@ header.hero {
   position: relative; /* Establece la posición relativa para posicionar absolutamente elementos internos si es necesario. */
 }
 
-#video-background {
+.video-background {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -43,7 +37,6 @@ header.hero {
   object-fit: cover; /* Asegura que el video cubra completamente el área sin deformarse */
   overflow: hidden; /* Oculta los desbordes del contenedor */
 }
-
 
 
 
@@ -197,23 +190,18 @@ header.hero {
 
 
 
-
-
-
-
-
-
-/* Base styles for the navbar */
-.navbar {
+.nav{
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 2rem;
-  background-color: transparent; /* Set background to transparent */
-  height: 80px; /* Fixed height */
-  width: 100%; /* Full width */
-  
+  justify-content: center; /* Centra los contenidos de la barra de navegación horizontalmente */
+  align-items: center; /* Alinea los contenidos verticalmente */
+  width: 100%; /* Asegura que la barra de navegación ocupe todo el ancho disponible */
+  background-color: transparent; 
+  box-shadow: 3px 3px 3px rgb(94, 255, 0);
+
 }
+
+
+
 
 .navbar-container {
   max-width: 1200px; /* Limiting max width for better alignment */
@@ -335,12 +323,7 @@ header.hero {
 
 
 
-/* Estilos base para el contenedor y la alineación del texto */
-.container {
-  max-width: 1200px;
-  margin: 0 auto; /* Centra el contenedor */
-  padding: 0px;
-}
+
 
 .text-center {
   text-align: center;
@@ -404,170 +387,11 @@ header.hero {
 
 
 .container {
-  margin: 0 auto;
+  max-width: 1200px;   /* Limita el ancho máximo del contenedor a 1200px */
+  margin: 0 auto;      /* Centra el contenedor horizontalmente en la página */
+  padding: 20px;       /* Añade padding para evitar que el contenido toque los bordes del contenedor */
+  box-sizing: border-box; /* Incluye el padding en el cálculo del ancho del contenedor */
 }
-
-.card {
-  position: relative;
-  width: 400px;
-  height: 300px;
-  margin: 0 auto;
-  background: #000;
-  border-radius: 15px;
-  box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
-}
-
-.face {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.face.back {
-  box-sizing: border-box;
-  padding: 1px;
-  padding-top: 0px;
-}
-
-.face.back b {
-  margin: 0;
-  padding: 0;
-}
-
-.face.back .desc {
-  background-color: #eee;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.face.front {
-  background-color: #045f5f;
-  border-radius: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding-top: 20px;
-  transition: 0.5s;
-  height: 100%; /* Establece la altura a full para evitar cambios */
-}
-
-.face.front b {
-  margin: 0;
-  padding: 0;
-  font-size: 2.1em;
-  color: #fff;
-  transition: 0.5s;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  z-index: 10;
-  text-align: center;
-}
-
-.card:hover .face.front {
-  height: 70px;
-}
-
-.card:hover .face.front b {
-  font-size: 2em;
-}
-
-.face.front {
-  background-color: #045f5f;
-  border-radius: 15px;
-}
-
-
-.face.back .content .card-image {
-  width: 100%;  /* Hace que la imagen ocupe el ancho completo del contenedor */
-  height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
-  max-height: 150px; /* Limita la altura máxima para mantener la imagen proporcionada al tamaño de la tarjeta */
-  object-fit: cover; /* Asegura que la imagen cubra completamente el espacio sin distorsionarse */
-  object-position: center; /* Centra la imagen dentro del espacio asignado */
-  display: block; /* Asegura que la imagen no esté en línea */
-  border-radius: 10px; /* Opcional: añade un borde redondeado para estilizar */
-}
-
-.face.back .content {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centra el contenido horizontalmente */
-  justify-content: center; /* Centra el contenido verticalmente */
-  padding: 20px; /* Proporciona espacio alrededor del contenido */
-  overflow: hidden; /* Oculta cualquier parte de la imagen que se desborde */
-}
-
-
-
-
-
-
-
-.container {
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.card_services {
-  position: relative;
-  width: 100%;
-  background: #0cbaba;
-  border-radius: 10px;
-  text-align: center;
-  overflow: hidden;
-  transition: transform 0.3s ease-in-out;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.card_services img {
-  width: 100%;
-  height: auto;
-  margin-top: 10px;
-}
-
-.card_services b {
-  font-size: 1.5rem;
-  display: block;
-  color: #fff;
-}
-
-.card_services p {
-  font-size: 0.9rem;
-  margin-top: 10px;
-  color: #fff;
-  padding: 0 10px; 
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -600,22 +424,25 @@ header.hero {
   0 0 25px rgb(0,140,255);
 }
 
-/* Estilos para el contenedor principal debajo del hero, usado para contener elementos principales. */
-.main {
-  padding: 20px; /* Relleno interno para separación de contenido. */
-  max-width: 1200px; /* Ancho máximo para controlar la extensión de los contenidos. */
-  margin: 0 auto; /* Centra el contenedor en la página. */
-}
-
-
-
-
 main {
-  font-family: 'Arial', sans-serif;
-  color: #333;
-  background: #ffffff;
-  padding: 20px;
+  font-family: 'Arial', sans-serif; /* Define la fuente para todos los elementos dentro de <main> */
+  color: #333; /* Establece el color de texto principal */
+  background: #ffffff; /* Establece el color de fondo */
+  padding: 20px; /* Relleno interno para separación de contenido */
+  max-width: 1200px; /* Ancho máximo para controlar la extensión de los contenidos */
+  margin: 0 auto; /* Centra el contenedor en la página */
 }
+
+
+
+
+
+
+
+
+
+
+
 
 .graphic img {
   width: 100%;
@@ -651,13 +478,7 @@ main {
   cursor: pointer;
 }
 
-.prev {
-  left: 10px;
-}
 
-.next {
-  right: 10px;
-}
 
 .background-section .background-image {
   background-size: cover;
@@ -730,23 +551,6 @@ footer {
   justify-content: center;
   align-items: center;
 }
-
-#left-brain, #right-brain {
-  position: absolute;
-  width: 150px;  /* Ajusta el tamaño si es necesario */
-  height: 150px; /* Ajusta el tamaño si es necesario */
-  top: 70%;  /* Centra verticalmente */
-  transform: translateY(-50%); /* Centra verticalmente */
-}
-
-#right-brain {
-  left: 75px; /* Ajusta a la mitad del ancho del logo para alinear inicialmente */
-}
-
-
-
-
-
 
 
 .feature-box {
@@ -827,20 +631,9 @@ footer {
   transform: scale(1.1);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
 
-.nav{
-  display: flex;
-  justify-content: center; /* Centra los contenidos de la barra de navegación horizontalmente */
-  align-items: center; /* Alinea los contenidos verticalmente */
-  width: 100%; /* Asegura que la barra de navegación ocupe todo el ancho disponible */
-  background-color: transparent; 
-  box-shadow: 3px 3px 3px rgb(94, 255, 0);
 
-}
+
 
 nav ul{
   list-style: none; /* Elimina los puntos de la lista para limpiar el diseño */
@@ -867,6 +660,25 @@ nav a{
   color: rgb(169, 166, 166);
 }
 
+@media (max-width: 412px) {
+  nav a {
+    padding: 0 3.9px;  /* Reduce el padding a algo más razonable para pantallas pequeñas */
+    font-size: 14px;  /* Reduce el tamaño de la fuente si es necesario */
+    justify-content: center; /* Asegura que el contenido esté centrado dentro del enlace */
+  }
+}
+
+
+
+@media (max-width: 360px) and (max-height: 640px) {
+  nav a {
+    
+    padding: 0vh;  /* Reduce el padding a algo más razonable para pantallas pequeñas */
+    font-size: 14px;  /* Reduce el tamaño de la fuente si es necesario */
+    justify-content: center;
+  }
+}
+
 nav a:hover{
   background-color: rgba(0, 0, 0, 0.1); /* Blanco con baja opacidad */
   color: rgb(1, 1, 1); /* Cambia el color del texto a un azul claro */
@@ -882,19 +694,23 @@ nav li:first-child{
 .sidebar{
   position: fixed;
   top: 0;
-  right: 0;
-  height: 100vh;
-  width: 250px;
+  right: 0; /* Asegúrate de que esté alineado a la derecha */
+  height: 100vh; /* Ajusta la altura para que ocupe el viewport vertical */
+  width: 250px; /* Define un ancho fijo que podría ser modificado para pantallas más pequeñas */
   z-index: 1000;
   background-color: rgba(25, 62, 211, 0.2);
-  backdrop-filter: blur(10px) ;
+  backdrop-filter: blur(10px);
   box-shadow: -10px 0 10px rgba(224, 200, 19, 0.05);
-  display: none;
+  display: none; /* Asegúrate de que se muestre solo cuando se necesite */
   flex-direction: column;
-  align-items:flex-start;
+  align-items: flex-start;
   justify-content: flex-start;
-  width: 100%;
 }
+
+
+
+
+
 .sidebar li{
   width: 100%;
 }
@@ -1157,13 +973,9 @@ h1 {
   }
 }
 
-@media (max-width: 320px) {
-  /* Estilos específicos para pantallas muy pequeñas */
-  .container, .button, h1, h2, h3 {
-      padding: 8px; /* Menor padding */
-      margin: 5px; /* Menor margen */
-      font-size: smaller; /* Fuente más pequeña si es necesario */
-  }
-}
+
+
+
+
 
 
